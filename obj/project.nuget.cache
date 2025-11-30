@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QZSwyNG6aY8=",
+  "dgSpecHash": "yKrtbSl985c=",
   "success": true,
-  "projectFilePath": "/Users/estergomes/FIAP FACULDADE/aulas e trabalhos/2 ano/fase4/capitulo7/TeamHeartFiap/team-heart-api/TeamHeartFiap/TeamHeartFiap.csproj",
+  "projectFilePath": "/Users/estergomes/FIAP FACULDADE/aulas e trabalhos/2 ano/fase4/capitulo7/team-heart-api-fiap/TeamHeartFiap.csproj",
   "expectedPackageFiles": [
     "/Users/estergomes/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
     "/Users/estergomes/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.1/automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
@@ -95,30 +95,5 @@
     "/Users/estergomes/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.22/microsoft.aspnetcore.app.ref.8.0.22.nupkg.sha512",
     "/Users/estergomes/.nuget/packages/microsoft.netcore.app.host.osx-x64/8.0.22/microsoft.netcore.app.host.osx-x64.8.0.22.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1603",
-      "level": "Warning",
-      "message": "TeamHeartFiap depends on Oracle.EntityFrameworkCore (>= 8.21.110) but Oracle.EntityFrameworkCore 8.21.110 was not found. Oracle.EntityFrameworkCore 8.21.121 was resolved instead.",
-      "projectPath": "/Users/estergomes/FIAP FACULDADE/aulas e trabalhos/2 ano/fase4/capitulo7/TeamHeartFiap/team-heart-api/TeamHeartFiap/TeamHeartFiap.csproj",
-      "warningLevel": 1,
-      "filePath": "/Users/estergomes/FIAP FACULDADE/aulas e trabalhos/2 ano/fase4/capitulo7/TeamHeartFiap/team-heart-api/TeamHeartFiap/TeamHeartFiap.csproj",
-      "libraryId": "Oracle.EntityFrameworkCore",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    },
-    {
-      "code": "NU1603",
-      "level": "Warning",
-      "message": "TeamHeartFiap depends on Oracle.ManagedDataAccess.Core (>= 3.21.133) but Oracle.ManagedDataAccess.Core 3.21.133 was not found. Oracle.ManagedDataAccess.Core 3.21.140 was resolved instead.",
-      "projectPath": "/Users/estergomes/FIAP FACULDADE/aulas e trabalhos/2 ano/fase4/capitulo7/TeamHeartFiap/team-heart-api/TeamHeartFiap/TeamHeartFiap.csproj",
-      "warningLevel": 1,
-      "filePath": "/Users/estergomes/FIAP FACULDADE/aulas e trabalhos/2 ano/fase4/capitulo7/TeamHeartFiap/team-heart-api/TeamHeartFiap/TeamHeartFiap.csproj",
-      "libraryId": "Oracle.ManagedDataAccess.Core",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    }
-  ]
+  "logs": []
 }

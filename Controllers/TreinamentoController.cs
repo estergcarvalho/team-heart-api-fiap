@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using TeamHeartFiap.Data;
-using TeamHeartFiap.Infra; 
-using TeamHeartFiap.Domain;
+using TeamHeartFiap.Infrastructure.Data; // AppDbContext
+using TeamHeartFiap.Domain;             // Entidades
+using TeamHeartFiap.ViewModels;         // ViewModels
 using System.Security.Claims;
 using TeamHeartFiap.ViewModels.TeamHeartFiap.ViewModels;
 

@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using TeamHeartFiap.Data;
-using TeamHeartFiap.Infra;
+using TeamHeartFiap.Infrastructure.Data; // para acessar AppDbContext
+using TeamHeartFiap.Domain; // para acessar MetricaDiversidade
 using TeamHeartFiap.ViewModels;
 
 namespace TeamHeartFiap.Controllers;

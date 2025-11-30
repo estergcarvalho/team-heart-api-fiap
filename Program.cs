@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using AutoMapper;
-using TeamHeartFiap.Data;
+using TeamHeartFiap.Infrastructure.Data;
 using TeamHeartFiap.Infrastructure;
 using TeamHeartFiap.Repositories;
 using TeamHeartFiap.Services;

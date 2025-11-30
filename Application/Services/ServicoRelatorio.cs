@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using TeamHeartFiap.Data;
-using TeamHeartFiap.Domain;
+using TeamHeartFiap.Infrastructure.Data; // AppDbContext
+using TeamHeartFiap.Domain; 
 
 namespace TeamHeartFiap.Services
 {

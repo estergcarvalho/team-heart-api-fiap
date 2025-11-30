@@ -1,4 +1,5 @@
 namespace TeamHeartFiap.Domain
+
 {
     // Trocar a classe TreinamentoVm (que estava no folder Domain por engano)
     // para a entidade de domínio Treinamento correta.

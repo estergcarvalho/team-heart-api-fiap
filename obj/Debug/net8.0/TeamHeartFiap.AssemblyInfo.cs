@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TeamHeartFiap")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+39c9b553d851c8a2b8c91d8481d6b223f8d42660")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8b1ce47481d86d471f71e20129564bf7ad72d8b2")]
 [assembly: System.Reflection.AssemblyProductAttribute("TeamHeartFiap")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TeamHeartFiap")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

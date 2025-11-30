@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/estergomes/FIAP FACULDADE/aulas e trabalhos/2 ano/fase4/capitulo7/TeamHeartFiap/team-heart-api/TeamHeartFiap/TeamHeartFiap.csproj": {}
+    "/Users/estergomes/FIAP FACULDADE/aulas e trabalhos/2 ano/fase4/capitulo7/team-heart-api-fiap/TeamHeartFiap.csproj": {}
   },
   "projects": {
-    "/Users/estergomes/FIAP FACULDADE/aulas e trabalhos/2 ano/fase4/capitulo7/TeamHeartFiap/team-heart-api/TeamHeartFiap/TeamHeartFiap.csproj": {
+    "/Users/estergomes/FIAP FACULDADE/aulas e trabalhos/2 ano/fase4/capitulo7/team-heart-api-fiap/TeamHeartFiap.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/estergomes/FIAP FACULDADE/aulas e trabalhos/2 ano/fase4/capitulo7/TeamHeartFiap/team-heart-api/TeamHeartFiap/TeamHeartFiap.csproj",
+        "projectUniqueName": "/Users/estergomes/FIAP FACULDADE/aulas e trabalhos/2 ano/fase4/capitulo7/team-heart-api-fiap/TeamHeartFiap.csproj",
         "projectName": "TeamHeartFiap",
-        "projectPath": "/Users/estergomes/FIAP FACULDADE/aulas e trabalhos/2 ano/fase4/capitulo7/TeamHeartFiap/team-heart-api/TeamHeartFiap/TeamHeartFiap.csproj",
+        "projectPath": "/Users/estergomes/FIAP FACULDADE/aulas e trabalhos/2 ano/fase4/capitulo7/team-heart-api-fiap/TeamHeartFiap.csproj",
         "packagesPath": "/Users/estergomes/.nuget/packages/",
-        "outputPath": "/Users/estergomes/FIAP FACULDADE/aulas e trabalhos/2 ano/fase4/capitulo7/TeamHeartFiap/team-heart-api/TeamHeartFiap/obj/",
+        "outputPath": "/Users/estergomes/FIAP FACULDADE/aulas e trabalhos/2 ano/fase4/capitulo7/team-heart-api-fiap/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/estergomes/.nuget/NuGet/NuGet.Config"
@@ -72,11 +72,11 @@
             },
             "Oracle.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[8.21.110, )"
+              "version": "[8.21.121, )"
             },
             "Oracle.ManagedDataAccess.Core": {
               "target": "Package",
-              "version": "[3.21.133, )"
+              "version": "[3.21.140, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

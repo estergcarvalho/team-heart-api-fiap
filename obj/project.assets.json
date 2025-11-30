@@ -4690,8 +4690,8 @@
       "Microsoft.EntityFrameworkCore.Design >= 8.0.4",
       "Microsoft.EntityFrameworkCore.InMemory >= 8.0.4",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.4",
-      "Oracle.EntityFrameworkCore >= 8.21.110",
-      "Oracle.ManagedDataAccess.Core >= 3.21.133",
+      "Oracle.EntityFrameworkCore >= 8.21.121",
+      "Oracle.ManagedDataAccess.Core >= 3.21.140",
       "Swashbuckle.AspNetCore >= 6.6.2",
       "System.IdentityModel.Tokens.Jwt >= 7.4.1"
     ]
@@ -4702,11 +4702,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/estergomes/FIAP FACULDADE/aulas e trabalhos/2 ano/fase4/capitulo7/TeamHeartFiap/team-heart-api/TeamHeartFiap/TeamHeartFiap.csproj",
+      "projectUniqueName": "/Users/estergomes/FIAP FACULDADE/aulas e trabalhos/2 ano/fase4/capitulo7/team-heart-api-fiap/TeamHeartFiap.csproj",
       "projectName": "TeamHeartFiap",
-      "projectPath": "/Users/estergomes/FIAP FACULDADE/aulas e trabalhos/2 ano/fase4/capitulo7/TeamHeartFiap/team-heart-api/TeamHeartFiap/TeamHeartFiap.csproj",
+      "projectPath": "/Users/estergomes/FIAP FACULDADE/aulas e trabalhos/2 ano/fase4/capitulo7/team-heart-api-fiap/TeamHeartFiap.csproj",
       "packagesPath": "/Users/estergomes/.nuget/packages/",
-      "outputPath": "/Users/estergomes/FIAP FACULDADE/aulas e trabalhos/2 ano/fase4/capitulo7/TeamHeartFiap/team-heart-api/TeamHeartFiap/obj/",
+      "outputPath": "/Users/estergomes/FIAP FACULDADE/aulas e trabalhos/2 ano/fase4/capitulo7/team-heart-api-fiap/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/estergomes/.nuget/NuGet/NuGet.Config"
@@ -4767,11 +4767,11 @@
           },
           "Oracle.EntityFrameworkCore": {
             "target": "Package",
-            "version": "[8.21.110, )"
+            "version": "[8.21.121, )"
           },
           "Oracle.ManagedDataAccess.Core": {
             "target": "Package",
-            "version": "[3.21.133, )"
+            "version": "[3.21.140, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
@@ -4818,27 +4818,5 @@
         "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1603",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "TeamHeartFiap depends on Oracle.EntityFrameworkCore (>= 8.21.110) but Oracle.EntityFrameworkCore 8.21.110 was not found. Oracle.EntityFrameworkCore 8.21.121 was resolved instead.",
-      "libraryId": "Oracle.EntityFrameworkCore",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    },
-    {
-      "code": "NU1603",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "TeamHeartFiap depends on Oracle.ManagedDataAccess.Core (>= 3.21.133) but Oracle.ManagedDataAccess.Core 3.21.133 was not found. Oracle.ManagedDataAccess.Core 3.21.140 was resolved instead.",
-      "libraryId": "Oracle.ManagedDataAccess.Core",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    }
-  ]
+  }
 }

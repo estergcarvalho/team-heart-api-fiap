@@ -31,11 +31,8 @@
 
         <!-- Pacotes Swagger/OpenAPI -->
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
-
-        <!-- Pacotes Oracle (Versões compatíveis com EF Core 8) -->
-        <PackageReference Include="Oracle.EntityFrameworkCore" Version="8.21.110" />
-        <!-- CORREÇÃO: Versão explícita para compatibilidade com .NET 8 -->
-        <PackageReference Include="Oracle.ManagedDataAccess.Core" Version="3.21.133" />
+        <PackageReference Include="Oracle.EntityFrameworkCore" Version="8.21.121" />
+        <PackageReference Include="Oracle.ManagedDataAccess.Core" Version="3.21.140" />
     </ItemGroup>
 
 </Project>
