@@ -1,0 +1,28 @@
+services:
+  oracle:
+    image: gvenzl/oracle-xe:18.4.0-slim
+    environment:
+      - ORACLE_PASSWORD=Oracle123!
+      - ORACLE_ALLOW_REMOTE=true
+    ports:
+      - "1521:1521"
+      - "8080:8080"
+    healthcheck:
+      test: ["CMD-SHELL", "echo 'SELECT 1 FROM DUAL;' | sqlplus -s system/Oracle123!@localhost:1521/XE || exit 1"]
+      interval: 10s
+      retries: 20
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile   # <-- AQUI ESTÁ A CORREÇÃO
+    depends_on:
+      oracle:
+        condition: service_healthy
+    environment:
+      ConnectionStrings__DefaultConnection: "User Id=RM560895;Password=fiap25;Data Source=oracle:1521/XE;"
+      JwtSettings__Secret: "troque-esta-chave-para-producao-com-32-chars-min"
+      JwtSettings__Issuer: "TeamHeartFiap"
+      JwtSettings__Audience: "TeamHeartFiapUsers"
+    ports:
+      - "5000:80"
