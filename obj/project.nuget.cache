@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "yKrtbSl985c=",
+  "dgSpecHash": "GOCfE+kCzN0=",
   "success": true,
   "projectFilePath": "/Users/estergomes/FIAP FACULDADE/aulas e trabalhos/2 ano/fase4/capitulo7/team-heart-api-fiap/TeamHeartFiap.csproj",
   "expectedPackageFiles": [
@@ -90,10 +90,7 @@
     "/Users/estergomes/.nuget/packages/system.text.json/8.0.0/system.text.json.8.0.0.nupkg.sha512",
     "/Users/estergomes/.nuget/packages/system.threading.channels/6.0.0/system.threading.channels.6.0.0.nupkg.sha512",
     "/Users/estergomes/.nuget/packages/system.threading.tasks.extensions/4.5.4/system.threading.tasks.extensions.4.5.4.nupkg.sha512",
-    "/Users/estergomes/.nuget/packages/system.windows.extensions/6.0.0/system.windows.extensions.6.0.0.nupkg.sha512",
-    "/Users/estergomes/.nuget/packages/microsoft.netcore.app.ref/8.0.22/microsoft.netcore.app.ref.8.0.22.nupkg.sha512",
-    "/Users/estergomes/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.22/microsoft.aspnetcore.app.ref.8.0.22.nupkg.sha512",
-    "/Users/estergomes/.nuget/packages/microsoft.netcore.app.host.osx-x64/8.0.22/microsoft.netcore.app.host.osx-x64.8.0.22.nupkg.sha512"
+    "/Users/estergomes/.nuget/packages/system.windows.extensions/6.0.0/system.windows.extensions.6.0.0.nupkg.sha512"
   ],
   "logs": []
 }
