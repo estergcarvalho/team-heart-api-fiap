@@ -20,7 +20,6 @@ public class AuthController : ControllerBase
     [HttpPost("login")]
     public IActionResult Login([FromBody] LoginRequest req)
     {
-        // Esse endpoint é apenas para teste. Em produção, valide usuário/senha.
         var claims = new List<Claim>
         {
             new Claim(JwtRegisteredClaimNames.Sub, req.Username ?? "usuario"),

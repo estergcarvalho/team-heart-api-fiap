@@ -20,7 +20,8 @@ public class RecrutamentoController : ControllerBase
     }
 
     [HttpGet("candidatos/{id:int}")]
-    public async Task<IActionResult> ObterPorId(int id)
+    // Corrigido para retornar IActionResult e remover o 'async' (resolve warning CS1998)
+    public IActionResult ObterPorId(int id)
     {
         // ideal chamar repositório/serviço; para manter simples, usar repositório direto pode ser adicionado
         return Ok(); // TODO: implementar busca por id se necessário
