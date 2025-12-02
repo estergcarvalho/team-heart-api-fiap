@@ -5,7 +5,7 @@ using TeamHeartFiap.Infrastructure.Data; // AppDbContext
 using TeamHeartFiap.Domain;             // Entidades
 using TeamHeartFiap.ViewModels;         // ViewModels
 using System.Security.Claims;
-using TeamHeartFiap.ViewModels.TeamHeartFiap.ViewModels;
+using TeamHeartFiap.ViewModels;
 
 namespace TeamHeartFiap.Controllers
 {
