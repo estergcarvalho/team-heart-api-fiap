@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TeamHeartFiap.Services;
 
+
 namespace TeamHeartFiap.Controllers;
 
 [ApiController]

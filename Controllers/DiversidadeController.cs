@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using TeamHeartFiap.Infrastructure.Data; // para acessar AppDbContext
-using TeamHeartFiap.Domain; // para acessar MetricaDiversidade
+using TeamHeartFiap.Infrastructure.Data;
+using TeamHeartFiap.Domain;
 using TeamHeartFiap.ViewModels;
 
 namespace TeamHeartFiap.Controllers;
@@ -16,15 +16,41 @@ public class DiversidadeController : ControllerBase
     [HttpGet("metricas")]
     public async Task<IActionResult> ObterMetricas([FromQuery] PaginacaoParams p)
     {
-        var q = _db.MetricasDiversidade
+        var query = _db.MetricasDiversidade
             .OrderByDescending(m => m.DataRegistro)
             .Skip((p.Page - 1) * p.PageSize)
             .Take(p.PageSize)
-            .Select(m => new MetricaDiversidadeVm { Categoria = m.Categoria, Contagem = m.Contagem });
+            .Select(m => new MetricaDiversidadeVm
+            {
+                Categoria = m.Categoria,
+                Contagem = m.Contagem
+            });
 
-        var items = await q.AsNoTracking().ToListAsync();
+        var items = await query.AsNoTracking().ToListAsync();
         var total = await _db.MetricasDiversidade.CountAsync();
 
-        return Ok(new { total, pagina = p.Page, tamanho = p.PageSize, items });
+        return Ok(new
+        {
+            total,
+            pagina = p.Page,
+            tamanho = p.PageSize,
+            items
+        });
+    }
+
+    [HttpPost("metricas")]
+    public async Task<IActionResult> CriarMetrica([FromBody] MetricaDiversidadeVm vm)
+    {
+        var metrica = new MetricaDiversidade
+        {
+            Categoria = vm.Categoria,
+            Contagem = vm.Contagem,
+            DataRegistro = DateTime.UtcNow
+        };
+
+        _db.MetricasDiversidade.Add(metrica);
+        await _db.SaveChangesAsync();
+
+        return CreatedAtAction(nameof(ObterMetricas), new { id = metrica.Id }, metrica);
     }
 }
