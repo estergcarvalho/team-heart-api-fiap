@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using TeamHeartFiap.Infrastructure.Data;
 using TeamHeartFiap.Domain;
 using TeamHeartFiap.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 
 namespace TeamHeartFiap.Controllers;
 
@@ -38,6 +39,7 @@ public class DiversidadeController : ControllerBase
         });
     }
 
+    [Authorize(Roles = "Admin")]
     [HttpPost("metricas")]
     public async Task<IActionResult> CriarMetrica([FromBody] MetricaDiversidadeVm vm)
     {

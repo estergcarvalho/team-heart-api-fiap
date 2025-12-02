@@ -2,7 +2,6 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TeamHeartFiap.Services;
 
-
 namespace TeamHeartFiap.Controllers;
 
 [ApiController]
@@ -16,8 +15,9 @@ public class RelatoriosController : ControllerBase
     [HttpGet("diversidade")]
     public async Task<IActionResult> ObterDiversidade([FromQuery] DateTime? de, [FromQuery] DateTime? ate)
     {
-        var inicio = de ?? DateTime.UtcNow.AddMonths(-1);
-        var fim = ate ?? DateTime.UtcNow;
+        var inicio = (de ?? DateTime.UtcNow.AddMonths(-1)).Date;
+        var fim = (ate ?? DateTime.UtcNow).Date.AddDays(1).AddTicks(-1);
+
         var resultado = await _servico.GerarRelatorioAsync(inicio, fim);
         return Ok(resultado);
     }
@@ -26,8 +26,9 @@ public class RelatoriosController : ControllerBase
     [HttpPost("exportar")]
     public async Task<IActionResult> Exportar([FromQuery] DateTime? de, [FromQuery] DateTime? ate)
     {
-        var inicio = de ?? DateTime.UtcNow.AddMonths(-1);
-        var fim = ate ?? DateTime.UtcNow;
+        var inicio = (de ?? DateTime.UtcNow.AddMonths(-1)).Date;
+        var fim = (ate ?? DateTime.UtcNow).Date.AddDays(1).AddTicks(-1);
+        
         var resultado = await _servico.GerarRelatorioAsync(inicio, fim);
 
         // Exportar CSV simples (em memória)
