@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using TeamHeartFiap.Services;
 using TeamHeartFiap.ViewModels;
+using TeamHeartFiap.Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace TeamHeartFiap.Controllers;
 
@@ -20,10 +22,31 @@ public class RecrutamentoController : ControllerBase
     }
 
     [HttpGet("candidatos/{id:int}")]
-    // Corrigido para retornar IActionResult e remover o 'async' (resolve warning CS1998)
-    public IActionResult ObterPorId(int id)
+    public async Task<IActionResult> ObterPorId(int id, [FromServices] AppDbContext db)
     {
-        // ideal chamar repositório/serviço; para manter simples, usar repositório direto pode ser adicionado
-        return Ok(); // TODO: implementar busca por id se necessário
+        var c = await db.Candidatos
+            .AsNoTracking()
+            .FirstOrDefaultAsync(x => x.Id == id);
+
+        if (c == null) return NotFound("Candidato não encontrado.");
+
+        return Ok(c);
     }
+    
+    [HttpGet("candidatos")]
+    public async Task<IActionResult> Listar([FromServices] AppDbContext db)
+    {
+        var lista = await db.Candidatos
+            .AsNoTracking()
+            .Select(c => new {
+                c.Id,
+                c.Nome,
+                c.Email,
+                c.Demografico
+            })
+            .ToListAsync();
+
+        return Ok(lista);
+    }
+
 }

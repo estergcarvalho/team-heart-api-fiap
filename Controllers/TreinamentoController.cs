@@ -113,5 +113,21 @@ namespace TeamHeartFiap.Controllers
 
             return NoContent();
         }
+        
+        [HttpPost]
+        public async Task<IActionResult> Criar([FromBody] TreinamentoVm vm)
+        {
+            var t = new Treinamento
+            {
+                Titulo = vm.Titulo,
+                Obrigatorio = vm.Obrigatorio
+            };
+
+            _db.Treinamentos.Add(t);
+            await _db.SaveChangesAsync();
+
+            return CreatedAtAction(nameof(Obter), new { id = t.Id }, t);
+        }
     }
+    
 }
