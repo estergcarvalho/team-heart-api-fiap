@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using TeamHeartFiap.Infrastructure.Data; // AppDbContext
-using TeamHeartFiap.Domain;             // Entidades
-using TeamHeartFiap.ViewModels;         // ViewModels
+using TeamHeartFiap.Infrastructure.Data;
+using TeamHeartFiap.Domain;             
+using TeamHeartFiap.ViewModels;         
 using System.Security.Claims;
 using TeamHeartFiap.ViewModels;
 
@@ -58,10 +58,9 @@ namespace TeamHeartFiap.Controllers
         [HttpPost("{id:int}/concluir")]
         public async Task<IActionResult> Concluir(
             int id,
-            [FromQuery] int? candidateId, // opcional: permite passar id do candidato em testes
+            [FromQuery] int? candidateId, 
             CancellationToken cancellationToken = default)
         {
-            // Verifica existência do treinamento
             var treinamento = await _db.Treinamentos
                 .AsNoTracking()
                 .FirstOrDefaultAsync(t => t.Id == id, cancellationToken);
@@ -69,7 +68,6 @@ namespace TeamHeartFiap.Controllers
             if (treinamento == null)
                 return NotFound(new { mensagem = "Treinamento não encontrado." });
 
-            // Tenta extrair CandidatoId da claim "sub" (caso armazene o id numérico no token)
             int candidatoIdResolved = 0;
             var sub = User?.FindFirst(ClaimTypes.NameIdentifier)?.Value
                       ?? User?.FindFirst("sub")?.Value;
@@ -84,14 +82,12 @@ namespace TeamHeartFiap.Controllers
             }
             else
             {
-                // não conseguimos descobrir o candidato -> exige envio do id
                 return BadRequest(new
                 {
                     mensagem = "Id do candidato não fornecido. Passe candidateId na query ou configure o claim 'sub' com o id numérico."
                 });
             }
 
-            // Opcional: validar se o candidato existe
             var candidatoExistente = await _db.Candidatos
                 .AsNoTracking()
                 .AnyAsync(c => c.Id == candidatoIdResolved, cancellationToken);
@@ -99,7 +95,6 @@ namespace TeamHeartFiap.Controllers
             if (!candidatoExistente)
                 return BadRequest(new { mensagem = "Candidato informado não existe." });
 
-            // Cria a conclusão
             var conclusao = new ConclusaoTreinamento
             {
                 TreinamentoId = id,
@@ -107,7 +102,6 @@ namespace TeamHeartFiap.Controllers
                 DataConclusao = DateTime.UtcNow
             };
 
-            // Use Add() para compatibilidade com providers antigos; SaveChangesAsync fará persistência.
             _db.ConclusoesTreinamento.Add(conclusao);
             await _db.SaveChangesAsync(cancellationToken);
 

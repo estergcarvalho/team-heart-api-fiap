@@ -19,14 +19,12 @@ namespace TeamHeartFiap.Repositories
 
         public Task AdicionarAsync(T entidade)
         {
-            // versão sem AddAsync
             _set.Add(entidade);
             return Task.CompletedTask;
         }
 
         public async Task<T?> ObterPorIdAsync(int id)
         {
-            // busca manual por ID, já que FindAsync pode não ser desejado generically
             var propId = typeof(T).GetProperty("Id");
 
             if (propId == null)

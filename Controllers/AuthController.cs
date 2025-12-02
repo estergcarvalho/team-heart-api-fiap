@@ -45,5 +45,5 @@ public class AuthController : ControllerBase
 public class LoginRequest
 {
     public string? Username { get; set; }
-    public string? Role { get; set; } // exemplo: "Admin" ou "User"
+    public string? Role { get; set; } 
 }

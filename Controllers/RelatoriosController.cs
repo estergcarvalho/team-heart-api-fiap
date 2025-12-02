@@ -31,7 +31,6 @@ public class RelatoriosController : ControllerBase
         
         var resultado = await _servico.GerarRelatorioAsync(inicio, fim);
 
-        // Exportar CSV simples (em memória)
         var csv = new System.Text.StringBuilder();
         csv.AppendLine("Categoria,Contagem,DataRegistro");
         foreach (var r in resultado)

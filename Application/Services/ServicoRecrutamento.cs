@@ -24,7 +24,6 @@ namespace TeamHeartFiap.Services
                 DataCandidatura = DateTime.UtcNow
             };
 
-            // Regra simples de priorização (exemplo)
             if (!string.IsNullOrWhiteSpace(candidato.Demografico) &&
                 candidato.Demografico.ToLower().Contains("negro"))
             {
